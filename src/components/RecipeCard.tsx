@@ -38,7 +38,7 @@ const RecipeCard: React.FC = () => {
         {slides.map((_, index) => (
           <div key={index} className="h-1 flex-1 bg-gray-300 rounded overflow-hidden">
             <div
-              className={`h-full ${currentIndex === index ? "bg-green-500 animate-progress" : "bg-gray-300"}`}
+              className={`h-full ${currentIndex === index ? "bg-green-400 animate-progress" : "bg-gray-300"}`}
               style={{ animationDuration: `${slides[currentIndex].duration}ms` }}
             ></div>
           </div>
@@ -51,7 +51,7 @@ const RecipeCard: React.FC = () => {
         <img
           src={slides[currentIndex].image}
           alt="Cooking Illustration"
-          className="w-72 h-72 object-cover mx-auto rounded-lg transition-all duration-500" // Imagen más pequeña y centrada
+          className="w-72 h-75 object-cover mx-auto rounded-lg transition-all duration-500" // Imagen más pequeña y centrada
         />
 
         {/* Texto dinámico */}
@@ -71,7 +71,7 @@ const RecipeCard: React.FC = () => {
 
       {/* Botón visible en la parte inferior */}
       <div className="w-full lg:w-3/5 px-4 mb-4">
-        <button className="w-full lg:w-1/3 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300">
+        <button className="w-full lg:w-1/3 bg-green-600 hover:bg-green-600 text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300">
           Shopping Now
         </button>
       </div>
