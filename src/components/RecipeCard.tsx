@@ -32,7 +32,7 @@ const RecipeCard: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-gray-50 px-2 lg:px-0 w-full">
+    <div className="flex flex-col items-center justify-between  bg-gray-50 px-2 lg:px-0 min-h-[95vh] max-w-4xl mx-auto w-full">
       {/* Barra de progreso tipo "Estados de WhatsApp" */}
       <div className="flex gap-1 w-full max-w-3xl px-2">
         {slides.map((_, index) => (
