@@ -6,9 +6,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
-    // @ts-expect-error-error
-    global: true,
-    environment: 'jsdom',
-    setupFiles: './setupTest.ts'
+    globals: true,
+    environment: 'jsdom', // Asegura que estás en el entorno correcto
+    coverage: {
+      provider: 'v8', // Usa c8 para generar el coverage
+      reporter: ['text', 'html'], // Muestra la cobertura en la terminal y genera un informe en HTML
+    },
+
   }
+  
 })

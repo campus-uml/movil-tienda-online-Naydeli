@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import recipeImage1 from "../assets/recipe1.jpeg";
+
 import recipeImage2 from "../assets/recipe2.jpeg";
-import recipeImage3 from "../assets/recipe3.jpeg";
+
 
 // Lista de imágenes con su título, descripción y duración
 const slides = [
-  { image: recipeImage1, title: "Ship at Your Home", text: "The products you order will be delivered to your address", duration: 5000 },
+ 
   { image: recipeImage2, title: "Healthy Meals", text: "Discover easy and healthy recipes for every day.", duration: 5000 },
-  { image: recipeImage3, title: "Online Shopping", text: "You can shopping anytime, anywhere that you want.", duration: 5000 },
+  
 ];
 
 const RecipeCard: React.FC = () => {
@@ -23,6 +23,12 @@ const RecipeCard: React.FC = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
   };
 
+  // Función para manejar el clic en el botón "Shopping Now"
+  const handleShoppingNowClick = () => {
+    
+    // Aquí puedes agregar más lógica, como redireccionar a otra página o realizar una acción específica
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -32,7 +38,7 @@ const RecipeCard: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col items-center justify-between  bg-gray-50 px-2 lg:px-0 min-h-[80vh] max-w-4xl mx-auto w-full">
+    <div className="flex flex-col items-center justify-between bg-gray-50 px-2 lg:px-0 min-h-[80vh] max-w-4xl mx-auto w-full">
       {/* Barra de progreso tipo "Estados de WhatsApp" */}
       <div className="flex gap-1 w-full max-w-3xl px-2">
         {slides.map((_, index) => (
@@ -71,7 +77,10 @@ const RecipeCard: React.FC = () => {
 
       {/* Botón visible en la parte inferior */}
       <div className="w-full lg:w-3/5 px-4 mb-4">
-        <button className="w-full lg:w-1/3 bg-green-600 hover:bg-green-600 text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300">
+        <button
+          className="w-full lg:w-1/3 bg-green-600 hover:bg-green-600 text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300"
+          onClick={handleShoppingNowClick}
+        >
           Shopping Now
         </button>
       </div>

@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RecipeCard Component > matches the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col items-center justify-between bg-gray-50 px-2 lg:px-0 min-h-[80vh] max-w-4xl mx-auto w-full"
+  >
+    <div
+      class="flex gap-1 w-full max-w-3xl px-2"
+    >
+      <div
+        class="h-1 flex-1 bg-gray-300 rounded overflow-hidden"
+      >
+        <div
+          class="h-full bg-green-400 animate-progress"
+          style="animation-duration: 5000ms;"
+        />
+      </div>
+    </div>
+    <div
+      class="text-center w-full lg:w-3/5 mt-6 px-2 relative flex flex-col items-center justify-center"
+    >
+      <img
+        alt="Cooking Illustration"
+        class="w-72 h-75 object-cover mx-auto rounded-lg transition-all duration-500"
+        src="/src/assets/recipe2.jpeg"
+      />
+      <h2
+        class="text-2xl lg:text-3xl font-bold text-gray-800 mt-4"
+      >
+        Healthy Meals
+      </h2>
+      <p
+        class="text-gray-600 text-sm lg:text-lg mt-2"
+      >
+        Discover easy and healthy recipes for every day.
+      </p>
+      <div
+        class="absolute inset-y-0 left-0 w-1/6 cursor-pointer"
+      />
+      <div
+        class="absolute inset-y-0 right-0 w-1/6 cursor-pointer"
+      />
+    </div>
+    <div
+      class="w-full lg:w-3/5 px-4 mb-4"
+    >
+      <button
+        class="w-full lg:w-1/3 bg-green-600 hover:bg-green-600 text-white font-semibold py-3 px-2 rounded-xl transition-all duration-300"
+      >
+        Shopping Now
+      </button>
+    </div>
+    <style>
+      
+        @keyframes progress {
+          from { width: 0%; }
+          to { width: 100%; }
+        }
+        .animate-progress {
+          animation: progress linear;
+        }
+      
+    </style>
+  </div>
+</DocumentFragment>
+`;
