@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, } from "@testing-library/react";
 import { describe, it,test, expect } from 'vitest';
 import '@testing-library/jest-dom';
 import RecipeCard from "../RecipeCard";
@@ -9,7 +9,7 @@ describe("RecipeCard Component", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("renders the Shopping Now button", () => {
+  test("renders the Shopping Now button", () => {
     render(<RecipeCard />);
     const buttonElement = screen.getByText(/Shopping Now/i);
     expect(buttonElement).toBeInTheDocument();
