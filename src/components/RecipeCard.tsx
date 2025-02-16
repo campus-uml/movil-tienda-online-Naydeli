@@ -3,10 +3,13 @@ import React, { useState, useEffect } from "react";
 import recipeImage2 from "../assets/recipe2.jpeg";
 
 
+
 // Lista de imágenes con su título, descripción y duración
 const slides = [
  
   { image: recipeImage2, title: "Healthy Meals", text: "Discover easy and healthy recipes for every day.", duration: 5000 },
+ 
+  
   
 ];
 

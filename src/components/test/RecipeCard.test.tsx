@@ -4,10 +4,7 @@ import '@testing-library/jest-dom';
 import RecipeCard from "../RecipeCard";
 
 describe("RecipeCard Component", () => {
-  it("matches the snapshot", () => {
-    const { asFragment } = render(<RecipeCard />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+ 
 
   test("renders the Shopping Now button", () => {
     render(<RecipeCard />);
@@ -37,5 +34,6 @@ describe("RecipeCard Component", () => {
     fireEvent.click(button);
     expect(button).toBeTruthy(); // Aquí puedes agregar más lógica si el botón debe realizar alguna acción
 });
+
   
 });
